@@ -1,5 +1,15 @@
 {
     "version": "2.0.0",
     "tasks": [
+        {
+            "label": "bridge-to-kubernetes.service",
+            "type": "bridge-to-kubernetes.service",
+            "service": "stats-api",
+            "ports": [
+                3001
+            ],
+            "targetCluster": "tf-teastore-aks-04-yk",
+            "targetNamespace": "todo-app"
+        }
     ]
 }
